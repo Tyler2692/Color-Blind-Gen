@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+
+void input () {
+
+
+    float mother;
+    float father;
+
+
+cout << "is the mother a carrier?" << endl;
+cout << "1 for yes & 2 for no." << endl;
+cin >> mother;
+
+cout << "is the father a carrier?" << endl;
+cout << "1 for yes & 2 for no." << endl;
+cin >> father;
+
+}
+
+
+
+int main (){
+
+input();
+
+return 0;
+
+}
