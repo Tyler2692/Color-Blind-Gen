@@ -3,12 +3,15 @@
 using namespace std;
 
 
-void input (float &mother, float &father) {
+void user_input (float &mother, float &father);
+
+
+void user_input (float &mother, float &father) {
 
     while (true) {
-cout << "is the mother a carrier?" << endl;
-cout << "1 for yes & 2 for no." << endl;
-cin >> mother;
+            cout << "is the mother a carrier?" << endl;
+            cout << "1 for yes & 2 for no." << endl;
+            cin >> mother;
 
    if (cin.fail()) {
             cin.clear();
@@ -18,13 +21,13 @@ cin >> mother;
     }
 
     else if (mother > 2) {
-    cout << " enter 1 or 2" << endl;
-    cout << "" << endl;
+            cout << " enter 1 or 2" << endl;
+            cout << "" << endl;
     }
 
     else if (mother < 1){
-    cout << " enter 1 or 2" << endl;
-    cout << "" << endl;
+            cout << " enter 1 or 2" << endl;
+            cout << "" << endl;
     }
 
     else {
@@ -33,9 +36,9 @@ cin >> mother;
 }
 
      while (true) {
-cout << "is the father a carrier?" << endl;
-cout << "1 for yes & 2 for no." << endl;
-cin >> father;
+            cout << "is the father a carrier?" << endl;
+            cout << "1 for yes & 2 for no." << endl;
+            cin >> father;
 
     if (cin.fail()) {
             cin.clear();
@@ -45,13 +48,13 @@ cin >> father;
     }
 
     else if (father > 2){
-    cout << " enter 1 or 2" << endl;
-    cout << "" << endl;
+            cout << " enter 1 or 2" << endl;
+            cout << "" << endl;
     }
 
     else if (father < 1){
-    cout << " enter 1 or 2" << endl;
-    cout << "" << endl;
+            cout << " enter 1 or 2" << endl;
+            cout << "" << endl;
     }
 
     else {
@@ -63,9 +66,13 @@ cin >> father;
 
 int main (){
 
+    cout << ".---..----..-.   .----..---. .--..-.   .-..-..-..--.  " << endl;
+    cout << "| |  | || || |__ | || || |-< |-< | |__ | || .` || \ \ " << endl;
+    cout << "`---'`----'`----'`----'`-'`-'`--'`----'`-'`-'`-'`-'-' " << endl;
+
     float mother, father;
 
-input(mother, father);
+user_input(mother, father);
 
 return 0;
 
