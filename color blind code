@@ -5,7 +5,7 @@ using namespace std;
 
 void user_input (float &mother, float &father);
 
-void output(float &mother, float &father);
+void output(float &mother, float &father); // declared functions
 
 
 void user_input (float &mother, float &father) {
@@ -20,8 +20,8 @@ void user_input (float &mother, float &father) {
    if (cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Invalid input." << endl; // checks if input is invalid, if it is invalid it loops
-            cout << "" << endl;
+            cout << "Invalid input." << endl; 
+            cout << "" << endl; // loops if input is invalid
     }
 
     else if (mother > 3) {
@@ -35,7 +35,7 @@ void user_input (float &mother, float &father) {
     }
 
     else {
-        break;
+        break; // breaks if input is valid
       }
 }
 
@@ -63,7 +63,7 @@ void user_input (float &mother, float &father) {
     }
 
     else {
-        break;
+        break; // breaks if input is valid
     }
 }
 
