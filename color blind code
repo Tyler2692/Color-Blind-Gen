@@ -8,13 +8,13 @@ void user_input (float &mother, float &father);
 void output(float &mother, float &father); // declared functions
 
 
-void user_input (float &mother, float &father) {
+void user_input (float &mother, float &father) { // function for input
 
-    while (true) {
+    while (true) { // loops until break
             cout << "is the mother colorblind?" << endl;
             cout << "1 for yes" << endl;
             cout << "2 for no," << endl;
-            cout << "3 for carrier" << endl;
+            cout << "3 for silent carrier" << endl;
             cin >> mother;
 
    if (cin.fail()) {
@@ -39,7 +39,7 @@ void user_input (float &mother, float &father) {
       }
 }
 
-     while (true) {
+     while (true) { // loops until break
             cout << "is the father colorblind?" << endl;
             cout << "1 for yes" << endl;
             cout << "2 for no" << endl;
@@ -48,7 +48,7 @@ void user_input (float &mother, float &father) {
     if (cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Invalid input." << endl; // checks if input is invalid, if it is invalid it loops
+            cout << "Invalid input." << endl;
             cout << "" << endl;
     }
 
@@ -69,7 +69,7 @@ void user_input (float &mother, float &father) {
 
 }
 
-void output(float &mother, float &father)
+void output(float &mother, float &father) // function for punnett square
 {
     if (father == 1)
     {
@@ -135,15 +135,15 @@ void output(float &mother, float &father)
 int main (){
 
     cout << ".---..----..-.   .----..---. .--..-.   .-..-..-..--.  " << endl;
-    cout << "| |  | || || |__ | || || |-< |-< | |__ | || .` || \ \ " << endl;
-    cout << "`---'`----'`----'`----'`-'`-'`--'`----'`-'`-'`-'`-'-' " << endl;
+    cout << "| |  | || || |__ | || || |-< |-< | |__ | || .` || | |" << endl;
+    cout << "`---'`----'`----'`----'`-'`-'`--'`----'`-'`-'`-'`-'-'" << endl;
 
     float mother, father;
 
 
-user_input(mother, father);
+user_input(mother, father); // function for input
 
-output(mother, father);
+output(mother, father); // function for punnett square
 
 
 return 0;
