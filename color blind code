@@ -5,12 +5,16 @@ using namespace std;
 
 void user_input (float &mother, float &father);
 
+void output(float &mother, float &father);
+
 
 void user_input (float &mother, float &father) {
 
     while (true) {
-            cout << "is the mother a carrier?" << endl;
-            cout << "1 for yes & 2 for no." << endl;
+            cout << "is the mother colorblind?" << endl;
+            cout << "1 for yes" << endl;
+            cout << "2 for no," << endl;
+            cout << "3 for carrier" << endl;
             cin >> mother;
 
    if (cin.fail()) {
@@ -20,7 +24,7 @@ void user_input (float &mother, float &father) {
             cout << "" << endl;
     }
 
-    else if (mother > 2) {
+    else if (mother > 3) {
             cout << " enter 1 or 2" << endl;
             cout << "" << endl;
     }
@@ -36,8 +40,9 @@ void user_input (float &mother, float &father) {
 }
 
      while (true) {
-            cout << "is the father a carrier?" << endl;
-            cout << "1 for yes & 2 for no." << endl;
+            cout << "is the father colorblind?" << endl;
+            cout << "1 for yes" << endl;
+            cout << "2 for no" << endl;
             cin >> father;
 
     if (cin.fail()) {
@@ -64,6 +69,69 @@ void user_input (float &mother, float &father) {
 
 }
 
+void output(float &mother, float &father)
+{
+    if (father == 1)
+    {
+        if (mother == 1){
+            cout << "        X  c  Y     " << endl;
+            cout << "   -----------------" << endl;
+            cout << " X |  XcCc |  XcY  |" << endl;
+            cout << " c -----------------" << endl;
+            cout << " X |  XcXc |  XcY  |" << endl;
+            cout << " c -----------------" << endl;
+        }
+
+        if (mother == 2){
+            cout << "        X  c  Y     " << endl;
+            cout << "   -----------------" << endl;
+            cout << " X |  XXc  |  XY   |" << endl;
+            cout << "   -----------------" << endl;
+            cout << " X |  XXc  |  XY   |" << endl;
+            cout << "   -----------------" << endl;
+        }
+
+        if (mother == 3) {
+            cout << "        X  c  Y     " << endl;
+            cout << "   -----------------" << endl;
+            cout << " X |  XcXc |  XcY  |" << endl;
+            cout << " c -----------------" << endl;
+            cout << " X |  XXc  |  XY   |" << endl;
+            cout << "   -----------------" << endl;
+        }
+    }
+
+    if (father == 2){
+         if (mother == 1){
+            cout << "        X     Y     " << endl;
+            cout << "   -----------------" << endl;
+            cout << " X |  XcX  |  XcY  |" << endl;
+            cout << " c -----------------" << endl;
+            cout << " X |  XcX  |  XcY  |" << endl;
+            cout << " c -----------------" << endl;
+        }
+
+        if (mother == 2){
+            cout << "        X     Y     " << endl;
+            cout << "   -----------------" << endl;
+            cout << " X |   XX  |  XY   |" << endl;
+            cout << "   -----------------" << endl;
+            cout << " X |   XX  |  XY   |" << endl;
+            cout << "   -----------------" << endl;
+        }
+
+        if (mother == 3) {
+            cout << "        X     Y     " << endl;
+            cout << "   -----------------" << endl;
+            cout << " X |  XcX  |  XcY  |" << endl;
+            cout << " c -----------------" << endl;
+            cout << " X |   XX  |  XY   |" << endl;
+            cout << "   -----------------" << endl;
+        }
+    }
+}
+
+
 int main (){
 
     cout << ".---..----..-.   .----..---. .--..-.   .-..-..-..--.  " << endl;
@@ -72,7 +140,11 @@ int main (){
 
     float mother, father;
 
+
 user_input(mother, father);
+
+output(mother, father);
+
 
 return 0;
 
