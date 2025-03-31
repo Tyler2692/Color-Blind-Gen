@@ -5,8 +5,8 @@ using namespace std;
 
 void user_input (float &mother, float &father);
 
-void output(float &mother, float &father); // declared functions
-
+void output(float &mother, float &father); 
+// declared functions
 
 void user_input (float &mother, float &father) { // function for input
 
@@ -71,62 +71,81 @@ void user_input (float &mother, float &father) { // function for input
 
 void output(float &mother, float &father) // function for punnett square
 {
-    if (father == 1)
+    if (father == 1) // if statement if father is colorblind
     {
-        if (mother == 1){
+        if (mother == 1){ // if statement if mother is colorblind
             cout << "        X  c  Y     " << endl;
             cout << "   -----------------" << endl;
             cout << " X |  XcCc |  XcY  |" << endl;
             cout << " c -----------------" << endl;
             cout << " X |  XcXc |  XcY  |" << endl;
             cout << " c -----------------" << endl;
+
+        cout<<"There is a 100% chance for a male to be colorblind"<<endl;
+        cout<<"There is a 0% chance for a female to be colorblind"<<endl;
         }
 
-        if (mother == 2){
+        if (mother == 2){ // if statement if mother isn't colorblind
             cout << "        X  c  Y     " << endl;
             cout << "   -----------------" << endl;
             cout << " X |  XXc  |  XY   |" << endl;
             cout << "   -----------------" << endl;
             cout << " X |  XXc  |  XY   |" << endl;
             cout << "   -----------------" << endl;
+
+        cout<<"There is a 0% chance for a male to be colorblind"<<endl;
+        cout<<"There is a 0% chance for a female to be colorblind"<<endl;
         }
 
-        if (mother == 3) {
+        if (mother == 3) { // if statement if mother is a slient carrier
             cout << "        X  c  Y     " << endl;
             cout << "   -----------------" << endl;
             cout << " X |  XcXc |  XcY  |" << endl;
             cout << " c -----------------" << endl;
             cout << " X |  XXc  |  XY   |" << endl;
             cout << "   -----------------" << endl;
+
+        cout<<"There is a 50% chance for a male to be colorblind"<<endl;
+        cout<<"There is a 0% chance for a female to be colorblind"<<endl;
         }
     }
 
-    if (father == 2){
-         if (mother == 1){
+    if (father == 2){ // if statement if father isn't colorblind
+
+         if (mother == 1){ // if statement if mother is colorblind
             cout << "        X     Y     " << endl;
             cout << "   -----------------" << endl;
             cout << " X |  XcX  |  XcY  |" << endl;
             cout << " c -----------------" << endl;
             cout << " X |  XcX  |  XcY  |" << endl;
             cout << " c -----------------" << endl;
+
+        cout<<"There is a 100% chance for a male to be colorblind"<<endl;
+        cout<<"There is a 100% chance for a female to be colorblind"<<endl;
         }
 
-        if (mother == 2){
+        if (mother == 2){ // if statement if mother isn't colorblind
             cout << "        X     Y     " << endl;
             cout << "   -----------------" << endl;
             cout << " X |   XX  |  XY   |" << endl;
             cout << "   -----------------" << endl;
             cout << " X |   XX  |  XY   |" << endl;
             cout << "   -----------------" << endl;
+
+        cout<<"There is a 0% chance for a male to be colorblind"<<endl;
+        cout<<"There is a 0% chance for a female to be colorblind"<<endl;
         }
 
-        if (mother == 3) {
+        if (mother == 3) { // if statement if mother is a slient carrier
             cout << "        X     Y     " << endl;
             cout << "   -----------------" << endl;
             cout << " X |  XcX  |  XcY  |" << endl;
             cout << " c -----------------" << endl;
             cout << " X |   XX  |  XY   |" << endl;
             cout << "   -----------------" << endl;
+
+        cout<<"There is a 50% chance for a male to be colorblind"<<endl;
+        cout<<"There is a 50% chance for a female to be colorblind"<<endl;
         }
     }
 }
@@ -141,9 +160,9 @@ int main (){
     float mother, father;
 
 
-user_input(mother, father); // function for input
+user_input(mother, father); // calling function for input
 
-output(mother, father); // function for punnett square
+output(mother, father); // calling function for punnett square
 
 
 return 0;
